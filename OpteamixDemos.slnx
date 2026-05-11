@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+  <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
+</Solution>

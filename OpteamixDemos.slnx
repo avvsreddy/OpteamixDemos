@@ -1,5 +1,12 @@
 <Solution>
+  <Folder Name="/MySimpleCalculator/" />
+  <Folder Name="/MySimpleCalculator/Backend/">
+    <Project Path="SimpleCalculator.BusinessLogic/SimpleCalculator.BusinessLogic.csproj" />
+  </Folder>
+  <Folder Name="/MySimpleCalculator/Frontend/">
+    <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
+    <Project Path="SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
+  </Folder>
   <Project Path="Labs_References/Labs_References.csproj" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
-  <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
 </Solution>

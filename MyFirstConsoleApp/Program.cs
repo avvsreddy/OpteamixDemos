@@ -48,11 +48,11 @@
             //Product p2 = new Product(1,"I Phone", 75000);
             var p2 = new  { ProductId=1, Name= "I Phone", Price=75000 };
 
-            p2.Price = 10;
-            Console.WriteLine(p2.Price);
+            //p2.Price = 10;
+            //Console.WriteLine(p2.Price);
 
-            Product p3 = new Product { ProductId =123 };
-            Product p4 = new Product { ProductId = 123, Price=50000 };
+            //Product p3 = new Product { ProductId =123 };
+            //Product p4 = new Product { ProductId = 123, Price=50000 };
 
             Console.WriteLine(p1.Price);
         }
@@ -130,32 +130,32 @@
         }
     }
 
-    //class Product // Entity Classess
-    //{
-    //    public int ProductId { get; set; }
-    //    public string Name { get; set; }
-    //    public double Price { get; set; }
+    class Product // Entity Classess
+    {
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
 
-    //    //public Product()
-    //    //{
-            
-    //    //}
-    //    //public Product(int id=0, string name=null, double price=0.0)  //: this(id,price)
-    //    //{
-    //    //    ProductId = id;
-    //    //    Price = price;
-    //    //    Name = name;
-    //    //}
+        public Product()
+        {
 
-    //    //public Product(int id)
-    //    //{
-    //    //    ProductId = id;
-    //    //}
+        }
+        public Product(int id = 0, string name = null, double price = 0.0)  //: this(id,price)
+        {
+            ProductId = id;
+            Price = price;
+            Name = name;
+        }
 
-    //    //public Product(int id, double price): this(id)
-    //    //{
-    //    //    //ProductId = id;
-    //    //    Price = price;
-    //    //}
-    //}
+        public Product(int id)
+        {
+            ProductId = id;
+        }
+
+        public Product(int id, double price) : this(id)
+        {
+            //ProductId = id;
+            Price = price;
+        }
+    }
 }

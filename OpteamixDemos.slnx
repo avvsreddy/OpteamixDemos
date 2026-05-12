@@ -9,4 +9,5 @@
   </Folder>
   <Project Path="Labs_References/Labs_References.csproj" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+  <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
 </Solution>

@@ -7,7 +7,9 @@
     <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
     <Project Path="SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
   </Folder>
+  <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
   <Project Path="Labs_References/Labs_References.csproj" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+  <Project Path="OOConcepts/OOConcepts.csproj" />
   <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
 </Solution>

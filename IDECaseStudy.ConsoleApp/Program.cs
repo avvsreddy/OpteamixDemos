@@ -8,10 +8,19 @@
             LangC c = new LangC();
             LangCSharp cs = new LangCSharp();
             LangJava java = new LangJava();
+            SomeLang sl = new SomeLang();
 
-            ide.Java = java;
-            ide.CS = cs;
-            ide.C = c;
+            ide.Languages.Add(c);
+            ide.Languages.Add(cs);
+            ide.Languages.Add(java);
+            ide.Languages.Add(sl);
+
+            //ILanguage il = new LangCSharp();
+            //il = new LangJava();
+
+            //ide.Java = java;
+            //ide.CS = cs;
+            //ide.C = c;
 
             ide.Work();
         }
@@ -19,67 +28,112 @@
 
     class IDE
     {
-        public LangC C { get; set; }
-        public LangCSharp CS { get; set; }
-        public LangJava Java { get; set; }
-        public SomeLang SL { get; set; }
+
+        //public List<ILanguage> languages = new List<ILanguage>();
+        public List<ILanguage> Languages { get; set; } = new List<ILanguage>();
+        //public ILanguage C { get; set; }
+        //public ILanguage CS { get; set; }
+        //public ILanguage Java { get; set; }
+        //public SomeLang SL { get; set; }
 
         public void Work() 
         {
-            Console.WriteLine(C.GetName());
-            Console.WriteLine(C.GetParadigm());
-            Console.WriteLine(C.GetUnit());
-            Console.WriteLine("-------------");
-            Console.WriteLine(CS.GetName());
-            Console.WriteLine(CS.GetParadigm());
-            Console.WriteLine(CS.GetUnit());
-            Console.WriteLine("-------------");
-            Console.WriteLine(Java.GetName());
-            Console.WriteLine(Java.GetParadigm());
-            Console.WriteLine(Java.GetUnit());
-            Console.WriteLine("-------------");
+            foreach (ILanguage lang in Languages)
+            {
+                Console.WriteLine(lang.GetName());
+                Console.WriteLine(lang.GetParadigm());
+                Console.WriteLine(lang.GetUnit());
+                Console.WriteLine("-------------");
+            }
+            //Console.WriteLine(CS.GetName());
+            //Console.WriteLine(CS.GetParadigm());
+            //Console.WriteLine(CS.GetUnit());
+            //Console.WriteLine("-------------");
+            //Console.WriteLine(Java.GetName());
+            //Console.WriteLine(Java.GetParadigm());
+            //Console.WriteLine(Java.GetUnit());
+            //Console.WriteLine("-------------");
 
         }
 
     }
 
 
-    class SomeLang
+    public interface ILanguage
     {
-        public void SomeMethod() { }
+        string GetParadigm();
+        string GetUnit();
+        string GetName();
     }
 
-    class LangCSharp
+
+    abstract public class OOLanguage : ILanguage
     {
+        abstract public string GetName();
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public string GetParadigm()
         {
-            return "Object Oriented";
+            return "OO Language ";
         }
+
         public string GetUnit()
         {
             return "Class";
         }
+    }
+
+    class SomeLang : ILanguage
+    {
         public string GetName()
+        {
+            return "Some Language";
+        }
+
+        public string GetParadigm()
+        {
+            return "Some Paradigm";
+        }
+
+        public string GetUnit()
+        {
+            return "Some Unit";
+        }
+    }
+
+    class LangCSharp : OOLanguage   // IS-A - Realization
+    {
+        //public string GetParadigm()
+        //{
+        //    return "Object Oriented";
+        //}
+        //public string GetUnit()
+        //{
+        //    return "Class";
+        //}
+        public override string GetName()
         {
             return "C Sharp";
         }
     }
-    class LangJava
+    class LangJava :OOLanguage
     {
-        public string GetParadigm()
-        {
-            return "Object Oriented";
-        }
-        public string GetUnit()
-        {
-            return "Class";
-        }
-        public string GetName()
+        //public string GetParadigm()
+        //{
+        //    return "Object Oriented";
+        //}
+        //public string GetUnit()
+        //{
+        //    return "Class";
+        //}
+        public override string GetName()
         {
             return "Java";
         }
     }
-    class LangC
+    class LangC : ILanguage
     {
         public string GetParadigm()
         {

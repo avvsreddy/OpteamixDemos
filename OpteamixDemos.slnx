@@ -7,6 +7,7 @@
     <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
     <Project Path="SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
   </Folder>
+  <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
   <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
   <Project Path="Labs_References/Labs_References.csproj" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />

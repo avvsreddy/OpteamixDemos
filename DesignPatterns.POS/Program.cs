@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns.POS
+﻿using System.Configuration;
+
+namespace DesignPatterns.POS
 {
     internal class Program
     {
@@ -6,6 +8,23 @@
         {
             ProcessBill processBill = new ProcessBill();
             processBill.Process();
+           
+        }
+    }
+
+    class TaxCalculatorFactory // make this class a singleton to ensure that only one instance of the factory is created and used throughout the application
+    {
+        public ITaxCalculator GetTaxCalculator()
+        {
+            // using reflection/RTTI to get the tax calculator based on the configuration or the location of the store
+            // Read the configuration file to get the calculator type
+            string calcType = ConfigurationManager.AppSettings["TaxCalculator"];
+            // create the tax calculator based on the type dynamically
+            Type theType = Type.GetType(calcType);
+            // create an instance of the tax calculator
+            return (ITaxCalculator) Activator.CreateInstance(theType);
+
+            //return new TNTaxCalculator();
         }
     }
 
@@ -20,7 +39,11 @@
             double total = 14500.00;
             // Calculate the Tax
             //TaxCalculator taxCalculator = new TaxCalculator();
-            KATaxCalculator taxCalculator = new KATaxCalculator();
+            TaxCalculatorFactory taxCalculatorFactory = new TaxCalculatorFactory();
+            Console.WriteLine(taxCalculatorFactory.GetHashCode());
+            TaxCalculatorFactory taxCalculatorFactory2 = new TaxCalculatorFactory();
+            Console.WriteLine(taxCalculatorFactory2.GetHashCode());
+            ITaxCalculator taxCalculator = taxCalculatorFactory.GetTaxCalculator();
             double tax = taxCalculator.CalculateTax(total);
             Console.WriteLine($"Total: {total}");
             Console.WriteLine($"Tax: {tax}");

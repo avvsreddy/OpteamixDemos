@@ -111,11 +111,37 @@
     {
         public bool SaveResult(string result)
         {
-            // Code to save the result to a file or database
-            StreamWriter sw = new StreamWriter("calculator_results.txt", true);
-            sw.WriteLine(result);
-            sw.Close();
+            try
+            {
+                // Code to save the result to a file or database
+                StreamWriter sw = new StreamWriter("a:/calculator_results.txt", true);
+                sw.WriteLine(result);
+                sw.Close();
+              
+            }
+            catch (Exception ex)
+            {
+                // Convert the exception to a custom exception if needed
+                ResultNotSavedException customEx = new ResultNotSavedException("Failed to save the result.", ex);
+                // log the exception or perform any necessary actions
+
+                // nLog
+                // log4net
+                // Serilog
+
+                // must rethrow the exception to be handled by the calling code
+                throw customEx;
+            }
+
             return true;
+        }
+    }
+
+    public class  ResultNotSavedException : ApplicationException
+    {
+        public ResultNotSavedException(string msg = null, Exception innerExp = null) : base(msg, innerExp)
+        {
+            
         }
     }
 }

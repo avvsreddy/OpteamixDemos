@@ -7,6 +7,11 @@
     <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
     <Project Path="SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
   </Folder>
+  <Folder Name="/Threads/">
+    <Project Path="MDDemoConsoleApp2/MDDemoConsoleApp2.csproj" Id="074e9568-9694-40d5-92dd-5b59eecc1266" />
+    <Project Path="MTDemo3ConsoleApp/MTDemo3ConsoleApp.csproj" Id="56f70c89-e2ff-411e-997c-1b0aa5b6cfdf" />
+    <Project Path="MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
+  </Folder>
   <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
   <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
   <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
@@ -19,7 +24,6 @@
   <Project Path="ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
   <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
   <Project Path="Labs_References/Labs_References.csproj" />
-  <Project Path="MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
   <Project Path="OOConcepts/OOConcepts.csproj" />
   <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />

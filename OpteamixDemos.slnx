@@ -10,7 +10,9 @@
   <Folder Name="/Threads/">
     <Project Path="MDDemoConsoleApp2/MDDemoConsoleApp2.csproj" Id="074e9568-9694-40d5-92dd-5b59eecc1266" />
     <Project Path="MTDemo3ConsoleApp/MTDemo3ConsoleApp.csproj" Id="56f70c89-e2ff-411e-997c-1b0aa5b6cfdf" />
+    <Project Path="MTDemo4ConsoleApp/MTDemo4ConsoleApp.csproj" Id="fe947228-38b7-48fe-a202-7f37923c6e09" />
     <Project Path="MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
+    <Project Path="MTDemoWinFormsApp/MTDemoWinFormsApp.csproj" Id="50a52863-e2a3-4af5-bea2-f97f239b8535" />
   </Folder>
   <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
   <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />

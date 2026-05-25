@@ -9,6 +9,7 @@
   </Folder>
   <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
   <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
   <Project Path="CustomDynamicCollectionsDemo/CustomDynamicCollectionsDemo.csproj" Id="aa6cf4e9-e3f5-4de6-bef9-2237622aa4da" />
   <Project Path="DelegatesDemo1/DelegatesDemo1.csproj" Id="30ea7f60-42ab-4cf4-9d3a-d51f248f8c4b" />
   <Project Path="DelegatesDemo2/DelegatesDemo2.csproj" Id="f5a89fc2-2263-4780-9132-6816ac20d63f" />
@@ -18,6 +19,7 @@
   <Project Path="ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
   <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
   <Project Path="Labs_References/Labs_References.csproj" />
+  <Project Path="MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
   <Project Path="OOConcepts/OOConcepts.csproj" />
   <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />

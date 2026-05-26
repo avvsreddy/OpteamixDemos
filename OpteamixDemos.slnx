@@ -15,6 +15,10 @@
     <Project Path="MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
     <Project Path="MTDemoWinFormsApp/MTDemoWinFormsApp.csproj" Id="50a52863-e2a3-4af5-bea2-f97f239b8535" />
   </Folder>
+  <Folder Name="/Unit Testing Demos/">
+    <Project Path="SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
+    <Project Path="SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
+  </Folder>
   <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
   <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
   <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />

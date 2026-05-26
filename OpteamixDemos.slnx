@@ -16,6 +16,8 @@
     <Project Path="MTDemoWinFormsApp/MTDemoWinFormsApp.csproj" Id="50a52863-e2a3-4af5-bea2-f97f239b8535" />
   </Folder>
   <Folder Name="/Unit Testing Demos/">
+    <Project Path="SuperBank.Business.Tests/SuperBank.Business.Tests.csproj" Id="b55f0254-d344-4b4f-9826-6f69bf40dca9" />
+    <Project Path="SuperBank.Business/SuperBank.Business.csproj" Id="23bf32a0-7a50-47ac-8b67-483f1183af91" />
     <Project Path="SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
     <Project Path="SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
   </Folder>

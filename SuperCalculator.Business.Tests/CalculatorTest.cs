@@ -3,6 +3,21 @@
     [TestClass]
     public sealed class CalculatorTest
     {
+
+        private Calculator target = null;
+
+        [TestInitialize] // Executes automatically before each test case method
+        public void Initialize() 
+        {
+            target = new Calculator();
+        }
+
+        [TestCleanup]
+        public void Cleanup() // Executes automatically after each test case
+        {
+            target = null;
+        }
+
         [TestMethod]
         [DataRow(10, 20, 30)] // Data Driven Testing : Multiple Test Cases for the same test method
         [DataRow(2, 2, 4)]
@@ -19,7 +34,7 @@
 
             // AAA - Arrange, Act, Assert
             // Arrange : Prepare the data and objects for testing
-            Calculator target = new Calculator();
+            //Calculator target = new Calculator();
             //int fno = 10;
             //int sno = 20;
             //int expected = 30;
@@ -41,7 +56,7 @@
         public void SumTest_WithNegativeInput_ShouldThrowNegativeInputException(int fno, int sno)
         {
             // Arrange
-            Calculator target = new Calculator();
+            //Calculator target = new Calculator();
             //int fno = -10;
             //int sno = 20;
             // Act and Assert
@@ -56,7 +71,7 @@
         public void SumTest_WithZeroInput_ShouldThrowZeroInputException(int fno, int sno)
         {
             // Arrange
-            Calculator target = new Calculator();
+            //Calculator target = new Calculator();
             //int fno = 0;
             //int sno = 20;
             // Act and Assert
@@ -71,7 +86,7 @@
         public void SumTest_WithOddInput_ShouldThrowOddInputException(int fno, int sno)
         {
             // Arrange
-            Calculator target = new Calculator();
+            //Calculator target = new Calculator();
             //int fno = 1;
             //int sno = 2;
             // Act and Assert

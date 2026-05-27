@@ -14,6 +14,8 @@
     <Project Path="LinqDemo2/LinqDemo2.csproj" Id="9fea32a6-ecaf-49c6-978e-c35714b24850" />
     <Project Path="LinqToObjectsDemo/LinqToObjectsDemo.csproj" Id="e986e504-d199-4011-bf91-faf0bb2f849b" />
     <Project Path="LinqToObjectsDemo2/LinqToObjectsDemo2.csproj" Id="583bc02d-f80f-4450-b74e-633c9dfbe640" />
+    <Project Path="LinqToXMLDemo1/LinqToXMLDemo1.csproj" Id="1d669cfa-70f1-4210-b917-d6b314622d14" />
+    <Project Path="LinqToXMLDemo2/LinqToXMLDemo2.csproj" Id="39de10de-dd53-4123-8c34-7abf5b8cded8" />
   </Folder>
   <Folder Name="/MySimpleCalculator/" />
   <Folder Name="/MySimpleCalculator/Backend/">

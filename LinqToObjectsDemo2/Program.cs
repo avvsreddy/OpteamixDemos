@@ -4,9 +4,37 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
+            // get all products in stock and display name
+            var inStockProducts = from p in Product.GetProducts()
+                                  where p.IsAvailable
+                                  select p;
+
+            foreach (var product in inStockProducts) { Console.WriteLine(product.Name); }
+
+            // get costliest product name then display
+            var costliestProductName = from p in Product.GetProducts()
+                                       orderby p.Price descending
+                                       select p.Name;
+
+
+            // get only name and price then display
+
+            var namePrice = from p in Product.GetProducts()
+                            select new  { Name =p.Name, Price = p.Price };
+
+            // count how many products not in stock
+            // get total worth of all products from china
+            // 
         }
     }
+
+
+    //public class NamePrice
+    //{
+    //    public string Name { get; set; }
+    //    public decimal Price { get; set; }
+    //}
 
     public class Product
     {

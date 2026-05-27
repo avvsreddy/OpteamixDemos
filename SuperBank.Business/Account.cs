@@ -1,4 +1,6 @@
-﻿namespace SuperBank.Business
+﻿using System.Net.Mail;
+
+namespace SuperBank.Business
 {
     public class Account
     {
@@ -6,7 +8,20 @@
         public double Balance { get; set; }
         public int Pin { get; set; }
         public bool IsActive { get; set; }
-        
+
+        private INotificationService notificationService = null;
+
+
+        //public Account()
+        //{
+        //    notificationService = new EmailNotification();
+        //}
+
+        public Account(INotificationService notificationService)
+        {
+            this.notificationService = notificationService;
+        }
+
 
         public bool Deposit(double amount)
         {
@@ -27,6 +42,12 @@
 
             Balance += amount;
             isDepositSuccessful = true;
+
+
+            // send email notification for successful deposit here
+            //EmailNotification emailNotification = new EmailNotification();
+            //notificationService.Notify($"Deposit of {amount} was successful. Your new balance is {Balance}");
+
             return isDepositSuccessful;
 
         }
@@ -58,9 +79,35 @@
 
             Balance -= amount;
             isWithdrawSuccessful = true;
+            notificationService.Notify($"Withdrawal of {amount} was successful. Your new balance is {Balance}");
             return isWithdrawSuccessful;
         }
 
-
+        public bool Transfer(Account target2, double v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
     }
+
+
+    public interface INotificationService
+    {
+        void Notify(string msg);
+    }
+
+
+    public class  EmailNotification : INotificationService
+    {
+        public void Notify(string msg)
+        {
+            // send email notification here
+            SmtpClient smtpClient = new SmtpClient();
+            MailMessage mailMessage = new MailMessage();
+            mailMessage.Subject = "Deposit Notification";
+            mailMessage.Body = msg;
+            smtpClient.Send(mailMessage); // it will fail
+        }
+    }
+
+
 }

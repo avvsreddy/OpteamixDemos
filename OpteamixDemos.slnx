@@ -1,4 +1,20 @@
 <Solution>
+  <Folder Name="/Collections/">
+    <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
+    <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
+    <Project Path="DynamicCollectionsDemo/DynamicCollectionsDemo.csproj" Id="d042f6e6-6008-44e2-9395-e8138cb28af5" />
+  </Folder>
+  <Folder Name="/Delegates/">
+    <Project Path="DelegatesDemo1/DelegatesDemo1.csproj" Id="30ea7f60-42ab-4cf4-9d3a-d51f248f8c4b" />
+    <Project Path="DelegatesDemo2/DelegatesDemo2.csproj" Id="f5a89fc2-2263-4780-9132-6816ac20d63f" />
+    <Project Path="DelegatesDemo3/DelegatesDemo3.csproj" Id="7d0aaad9-127e-4688-a9ca-23856b4df846" />
+  </Folder>
+  <Folder Name="/LINQ/">
+    <Project Path="LinqDemo1/LinqDemo1.csproj" Id="07930503-e1cc-4cfd-9623-6f888438ad2a" />
+    <Project Path="LinqDemo2/LinqDemo2.csproj" Id="9fea32a6-ecaf-49c6-978e-c35714b24850" />
+    <Project Path="LinqToObjectsDemo/LinqToObjectsDemo.csproj" Id="e986e504-d199-4011-bf91-faf0bb2f849b" />
+    <Project Path="LinqToObjectsDemo2/LinqToObjectsDemo2.csproj" Id="583bc02d-f80f-4450-b74e-633c9dfbe640" />
+  </Folder>
   <Folder Name="/MySimpleCalculator/" />
   <Folder Name="/MySimpleCalculator/Backend/">
     <Project Path="SimpleCalculator.BusinessLogic/SimpleCalculator.BusinessLogic.csproj" />
@@ -6,6 +22,12 @@
   <Folder Name="/MySimpleCalculator/Frontend/">
     <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
     <Project Path="SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/OO/">
+    <Project Path="DesignPatterns.POS/DesignPatterns.POS.csproj" Id="9744165a-2a79-44d3-aff9-ec1b5515faa0" />
+    <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
+    <Project Path="OOConcepts/OOConcepts.csproj" />
+    <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
   </Folder>
   <Folder Name="/Threads/">
     <Project Path="MDDemoConsoleApp2/MDDemoConsoleApp2.csproj" Id="074e9568-9694-40d5-92dd-5b59eecc1266" />
@@ -21,19 +43,9 @@
     <Project Path="SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
     <Project Path="SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
   </Folder>
-  <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
-  <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
   <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
   <Project Path="CustomDynamicCollectionsDemo/CustomDynamicCollectionsDemo.csproj" Id="aa6cf4e9-e3f5-4de6-bef9-2237622aa4da" />
-  <Project Path="DelegatesDemo1/DelegatesDemo1.csproj" Id="30ea7f60-42ab-4cf4-9d3a-d51f248f8c4b" />
-  <Project Path="DelegatesDemo2/DelegatesDemo2.csproj" Id="f5a89fc2-2263-4780-9132-6816ac20d63f" />
-  <Project Path="DelegatesDemo3/DelegatesDemo3.csproj" Id="7d0aaad9-127e-4688-a9ca-23856b4df846" />
-  <Project Path="DesignPatterns.POS/DesignPatterns.POS.csproj" Id="9744165a-2a79-44d3-aff9-ec1b5515faa0" />
-  <Project Path="DynamicCollectionsDemo/DynamicCollectionsDemo.csproj" Id="d042f6e6-6008-44e2-9395-e8138cb28af5" />
   <Project Path="ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
-  <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
   <Project Path="Labs_References/Labs_References.csproj" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
-  <Project Path="OOConcepts/OOConcepts.csproj" />
-  <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
 </Solution>

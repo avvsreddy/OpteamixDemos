@@ -20,10 +20,15 @@ namespace EFDemoConsoleApp1.DataAccess
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Integrated Security=True;Initial Catalog=OpteamixEmpDb").LogTo(Console.WriteLine,LogLevel.Information);
         }
 
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Fluent API Syntax
+            //modelBuilder.Entity<Employee>().HasKey(e => e.EmpId);
+            //modelBuilder.Entity<Employee>().Property(e => e.Name).HasColumnName("EmpName").HasMaxLength(100);
+        }
 
         // Map Entity Classes with Tables
         public DbSet<Employee> Employees { get; set; }
-
+        public DbSet<Address> Addresses { get; set; }
     }
 }

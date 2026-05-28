@@ -9,15 +9,21 @@ namespace EFDemoConsoleApp1.Presentation
     {
         static void Main(string[] args)
         {
-            // Save
-            // Read
-            // Delete
-            // Edit
+            // Add new employee with new address
+            using (EmployeeDbContext db = new EmployeeDbContext())
+            {
+                Employee e = new Employee {Name = "Ramesh", Designation = "DevOps Engineer", Salary = 67000 };
 
-           
+                Address adr = new Address { City = "Bangalore" };
 
+                e.Address = adr;
+
+                db.Employees.Add(e);
+                //db.Addresses.Add(adr); // this is optional
+                db.SaveChanges();
+                Console.WriteLine("Employee with address saved...");
+            }
         }
-
         private static void Edit()
         {
             using (EmployeeDbContext db = new EmployeeDbContext())

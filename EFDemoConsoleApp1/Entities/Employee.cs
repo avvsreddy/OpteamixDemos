@@ -25,12 +25,15 @@ namespace EFDemoConsoleApp1.Entities
         public int Bonus { get; set; }
 
         public Address Address { get; set; }
+        public Project Project { get; set; }
+
+        public List<Skill> Skills { get; set; } = new List<Skill>();
     }
 
-
+    [ComplexType]
     public class Address
     {
-        public int AddressID { get; set; }
+        //public int AddressID { get; set; }
         public string? Line1 { get; set; }
         public string? Line2 { get; set; }
         public string? Area { get; set; }
@@ -38,5 +41,38 @@ namespace EFDemoConsoleApp1.Entities
         public string City { get; set; }
         public string? Country { get; set; }
         public string? Pincode { get; set; }
+    }
+   
+    public class Skill
+    {
+        public int SkillID { get; set; }
+        public string Name { get; set; }
+        public List<Employee> Employees { get; set; }
+    }
+
+    abstract public class Project
+    {
+        public int ProjectID { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Client { get; set; }
+
+        public List<Employee> Employees { get; set; } = new List<Employee>();
+    }
+
+    public class WebProject : Project
+    {
+        public string WebUrl { get; set; }
+    }
+
+    public class MobileProject : Project
+    {
+        public string Plotform { get; set; } // IOS, Android
+    }
+
+    public class DesktopProject : Project
+    {
+        public string OS { get; set; } //Win, Linux
     }
 }

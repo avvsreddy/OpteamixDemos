@@ -4,6 +4,7 @@ using EFDemoConsoleApp1.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDemoConsoleApp1.Migrations
 {
     [DbContext(typeof(EmployeeDbContext))]
-    partial class EmployeeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260529062102_TPH")]
+    partial class TPH
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,8 +24,6 @@ namespace EFDemoConsoleApp1.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.HasSequence("ProjectSequence");
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.Employee", b =>
                 {
@@ -81,14 +82,18 @@ namespace EFDemoConsoleApp1.Migrations
                 {
                     b.Property<int>("ProjectID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR [ProjectSequence]");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("ProjectID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectID"));
 
                     b.Property<string>("Client")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("nvarchar(21)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -96,9 +101,11 @@ namespace EFDemoConsoleApp1.Migrations
 
                     b.HasKey("ProjectID");
 
-                    b.ToTable((string)null);
+                    b.ToTable("Projects");
 
-                    b.UseTpcMappingStrategy();
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Project");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.Skill", b =>
@@ -141,7 +148,7 @@ namespace EFDemoConsoleApp1.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("DesktopProjects");
+                    b.HasDiscriminator().HasValue("DesktopProject");
                 });
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.MobileProject", b =>
@@ -152,7 +159,7 @@ namespace EFDemoConsoleApp1.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("MobileProjects");
+                    b.HasDiscriminator().HasValue("MobileProject");
                 });
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.WebProject", b =>
@@ -163,7 +170,7 @@ namespace EFDemoConsoleApp1.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("WebProjects");
+                    b.HasDiscriminator().HasValue("WebProject");
                 });
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.Employee", b =>

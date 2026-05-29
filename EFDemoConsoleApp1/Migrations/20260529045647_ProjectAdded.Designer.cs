@@ -4,6 +4,7 @@ using EFDemoConsoleApp1.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDemoConsoleApp1.Migrations
 {
     [DbContext(typeof(EmployeeDbContext))]
-    partial class EmployeeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260529045647_ProjectAdded")]
+    partial class ProjectAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,8 +24,6 @@ namespace EFDemoConsoleApp1.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.HasSequence("ProjectSequence");
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.Employee", b =>
                 {
@@ -81,10 +82,9 @@ namespace EFDemoConsoleApp1.Migrations
                 {
                     b.Property<int>("ProjectID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR [ProjectSequence]");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("ProjectID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectID"));
 
                     b.Property<string>("Client")
                         .IsRequired()
@@ -96,105 +96,18 @@ namespace EFDemoConsoleApp1.Migrations
 
                     b.HasKey("ProjectID");
 
-                    b.ToTable((string)null);
-
-                    b.UseTpcMappingStrategy();
-                });
-
-            modelBuilder.Entity("EFDemoConsoleApp1.Entities.Skill", b =>
-                {
-                    b.Property<int>("SkillID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SkillID"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("SkillID");
-
-                    b.ToTable("Skills");
-                });
-
-            modelBuilder.Entity("EmployeeSkill", b =>
-                {
-                    b.Property<int>("EmployeesEmpId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SkillsSkillID")
-                        .HasColumnType("int");
-
-                    b.HasKey("EmployeesEmpId", "SkillsSkillID");
-
-                    b.HasIndex("SkillsSkillID");
-
-                    b.ToTable("EmployeeSkill");
-                });
-
-            modelBuilder.Entity("EFDemoConsoleApp1.Entities.DesktopProject", b =>
-                {
-                    b.HasBaseType("EFDemoConsoleApp1.Entities.Project");
-
-                    b.Property<string>("OS")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("DesktopProjects");
-                });
-
-            modelBuilder.Entity("EFDemoConsoleApp1.Entities.MobileProject", b =>
-                {
-                    b.HasBaseType("EFDemoConsoleApp1.Entities.Project");
-
-                    b.Property<string>("Plotform")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("MobileProjects");
-                });
-
-            modelBuilder.Entity("EFDemoConsoleApp1.Entities.WebProject", b =>
-                {
-                    b.HasBaseType("EFDemoConsoleApp1.Entities.Project");
-
-                    b.Property<string>("WebUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("WebProjects");
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("EFDemoConsoleApp1.Entities.Employee", b =>
                 {
                     b.HasOne("EFDemoConsoleApp1.Entities.Project", "Project")
-                        .WithMany("Employees")
+                        .WithMany()
                         .HasForeignKey("ProjectID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Project");
-                });
-
-            modelBuilder.Entity("EmployeeSkill", b =>
-                {
-                    b.HasOne("EFDemoConsoleApp1.Entities.Employee", null)
-                        .WithMany()
-                        .HasForeignKey("EmployeesEmpId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EFDemoConsoleApp1.Entities.Skill", null)
-                        .WithMany()
-                        .HasForeignKey("SkillsSkillID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("EFDemoConsoleApp1.Entities.Project", b =>
-                {
-                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }

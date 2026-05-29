@@ -9,12 +9,97 @@ namespace EFDemoConsoleApp1.Presentation
     {
         static void Main(string[] args)
         {
+            // add new emp
+            Employee e = new Employee { Name = "Ganesh", Salary = 69000, Designation = "Developer" };
+            Address adr = new Address { City = "Mysore" };
+            e.Address = adr;
+
+            Project p = new WebProject { Name = "Web", WebUrl = "http:sdfsdf.com", Client = "client 1" };
+            e.Project = p;
+
+            IEmployeeRepository repo = new EmployeeRepository();
+            repo.AddEmployee(e);
+            Console.WriteLine("saved");
+        }
+
+        private static void RawSQL()
+        {
+            using (EmployeeDbContext db = new EmployeeDbContext())
+            {
+
+                //db.Skills.RemoveRange(db.Skills);
+                //db.SaveChanges();
+
+                // delete from skills
+
+                db.Database.ExecuteSqlRaw("delete from skills");
+
+            }
+        }
+
+        private static void GetAllMobiles()
+        {
+            // get all mobile project
+
+            using (EmployeeDbContext db = new EmployeeDbContext())
+            {
+                //var mobileProjects = from mp in db.MobileProjects
+                //                     select mp;
+
+                var mobileProjects = from mp in db.Projects.OfType<MobileProject>()
+                                     select mp;
+
+                foreach (var project in mobileProjects)
+                {
+                    Console.WriteLine(project.Name);
+                }
+
+            }
+        }
+
+        private static void AddProjects()
+        {
+            using (EmployeeDbContext db = new EmployeeDbContext())
+            {
+                var mp = new MobileProject { Name = "Mobile Project 1", Client = "Google", Plotform = "Android" };
+                var wp = new WebProject { Name = "Web Project 1", Client = "Govt of India", WebUrl = "www.india.gov.in" };
+                var dp = new DesktopProject { Name = "Desktop Project 1", Client = "Microsoft", OS = "Windows" };
+
+                //db.Projects.Add(mp);
+                //db.Projects.Add(wp);
+                //db.Projects.Add(dp);
+
+                db.MobileProjects.Add(mp);
+                db.WebProjects.Add(wp);
+                db.DesktopProjects.Add(dp);
+
+                db.SaveChanges();
+            }
+        }
+
+        private static void EgarLoading()
+        {
+            // get employee data then display name and city
+            using (EmployeeDbContext db = new EmployeeDbContext())
+            {
+                var employees = from e in db.Employees //.Include("Address") //.Include("Projects") //.Include(e=>e.Address)
+                                select e;
+
+                foreach (Employee employee in employees)
+                {
+                    Console.WriteLine($"{employee.Name} \t {employee.Address.City}");
+                }
+            }
+        }
+
+        private static void Add()
+        {
             // Add new employee with new address
             using (EmployeeDbContext db = new EmployeeDbContext())
             {
-                Employee e = new Employee {Name = "Ramesh", Designation = "DevOps Engineer", Salary = 67000 };
+                Employee e = new Employee { Name = "Somesh", Designation = "DevOps Engineer", Salary = 67000 };
 
-                Address adr = new Address { City = "Bangalore" };
+                Address adr = new Address { City = "Chennai" };
 
                 e.Address = adr;
 
@@ -24,6 +109,7 @@ namespace EFDemoConsoleApp1.Presentation
                 Console.WriteLine("Employee with address saved...");
             }
         }
+
         private static void Edit()
         {
             using (EmployeeDbContext db = new EmployeeDbContext())

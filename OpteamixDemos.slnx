@@ -1,56 +1,57 @@
 <Solution>
   <Folder Name="/Collections/">
-    <Project Path="CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
-    <Project Path="CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
-    <Project Path="DynamicCollectionsDemo/DynamicCollectionsDemo.csproj" Id="d042f6e6-6008-44e2-9395-e8138cb28af5" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/DynamicCollectionsDemo/DynamicCollectionsDemo.csproj" Id="d042f6e6-6008-44e2-9395-e8138cb28af5" />
   </Folder>
   <Folder Name="/Delegates/">
-    <Project Path="DelegatesDemo1/DelegatesDemo1.csproj" Id="30ea7f60-42ab-4cf4-9d3a-d51f248f8c4b" />
-    <Project Path="DelegatesDemo2/DelegatesDemo2.csproj" Id="f5a89fc2-2263-4780-9132-6816ac20d63f" />
-    <Project Path="DelegatesDemo3/DelegatesDemo3.csproj" Id="7d0aaad9-127e-4688-a9ca-23856b4df846" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/DelegatesDemo1/DelegatesDemo1.csproj" Id="30ea7f60-42ab-4cf4-9d3a-d51f248f8c4b" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/DelegatesDemo2/DelegatesDemo2.csproj" Id="f5a89fc2-2263-4780-9132-6816ac20d63f" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/DelegatesDemo3/DelegatesDemo3.csproj" Id="7d0aaad9-127e-4688-a9ca-23856b4df846" />
   </Folder>
   <Folder Name="/EF Demos/">
-    <Project Path="EFDemoConsoleApp1/EFDemoConsoleApp1.csproj" Id="c3df86c5-7427-4dd5-beb9-a2dadfe18fb1" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/EFDemoConsoleApp1/EFDemoConsoleApp1.csproj" Id="c3df86c5-7427-4dd5-beb9-a2dadfe18fb1" />
   </Folder>
   <Folder Name="/LINQ/">
-    <Project Path="LinqDemo1/LinqDemo1.csproj" Id="07930503-e1cc-4cfd-9623-6f888438ad2a" />
-    <Project Path="LinqDemo2/LinqDemo2.csproj" Id="9fea32a6-ecaf-49c6-978e-c35714b24850" />
-    <Project Path="LinqToObjectsDemo/LinqToObjectsDemo.csproj" Id="e986e504-d199-4011-bf91-faf0bb2f849b" />
-    <Project Path="LinqToObjectsDemo2/LinqToObjectsDemo2.csproj" Id="583bc02d-f80f-4450-b74e-633c9dfbe640" />
-    <Project Path="LinqToXMLDemo1/LinqToXMLDemo1.csproj" Id="1d669cfa-70f1-4210-b917-d6b314622d14" />
-    <Project Path="LinqToXMLDemo2/LinqToXMLDemo2.csproj" Id="39de10de-dd53-4123-8c34-7abf5b8cded8" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqDemo1/LinqDemo1.csproj" Id="07930503-e1cc-4cfd-9623-6f888438ad2a" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqDemo2/LinqDemo2.csproj" Id="9fea32a6-ecaf-49c6-978e-c35714b24850" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqToObjectsDemo/LinqToObjectsDemo.csproj" Id="e986e504-d199-4011-bf91-faf0bb2f849b" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqToObjectsDemo2/LinqToObjectsDemo2.csproj" Id="583bc02d-f80f-4450-b74e-633c9dfbe640" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqToXMLDemo1/LinqToXMLDemo1.csproj" Id="1d669cfa-70f1-4210-b917-d6b314622d14" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqToXMLDemo2/LinqToXMLDemo2.csproj" Id="39de10de-dd53-4123-8c34-7abf5b8cded8" />
   </Folder>
   <Folder Name="/MySimpleCalculator/" />
   <Folder Name="/MySimpleCalculator/Backend/">
-    <Project Path="SimpleCalculator.BusinessLogic/SimpleCalculator.BusinessLogic.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SimpleCalculator.BusinessLogic/SimpleCalculator.BusinessLogic.csproj" />
   </Folder>
   <Folder Name="/MySimpleCalculator/Frontend/">
-    <Project Path="SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
-    <Project Path="SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SimpleCalculator.Console/SimpleCalculator.Console.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SimpleCalculator.Desktop/SimpleCalculator.Desktop.csproj" />
   </Folder>
   <Folder Name="/OO/">
-    <Project Path="DesignPatterns.POS/DesignPatterns.POS.csproj" Id="9744165a-2a79-44d3-aff9-ec1b5515faa0" />
-    <Project Path="IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
-    <Project Path="OOConcepts/OOConcepts.csproj" />
-    <Project Path="TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/DesignPatterns.POS/DesignPatterns.POS.csproj" Id="9744165a-2a79-44d3-aff9-ec1b5515faa0" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/OOConcepts/OOConcepts.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
   </Folder>
   <Folder Name="/Threads/">
-    <Project Path="MDDemoConsoleApp2/MDDemoConsoleApp2.csproj" Id="074e9568-9694-40d5-92dd-5b59eecc1266" />
-    <Project Path="MTDemo3ConsoleApp/MTDemo3ConsoleApp.csproj" Id="56f70c89-e2ff-411e-997c-1b0aa5b6cfdf" />
-    <Project Path="MTDemo4ConsoleApp/MTDemo4ConsoleApp.csproj" Id="fe947228-38b7-48fe-a202-7f37923c6e09" />
-    <Project Path="MTDemo6ConsoleApp/MTDemo6ConsoleApp.csproj" Id="99439de5-ff7e-4236-bec5-f7d8c6c070d2" />
-    <Project Path="MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
-    <Project Path="MTDemoWinFormsApp/MTDemoWinFormsApp.csproj" Id="50a52863-e2a3-4af5-bea2-f97f239b8535" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MDDemoConsoleApp2/MDDemoConsoleApp2.csproj" Id="074e9568-9694-40d5-92dd-5b59eecc1266" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MTDemo3ConsoleApp/MTDemo3ConsoleApp.csproj" Id="56f70c89-e2ff-411e-997c-1b0aa5b6cfdf" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MTDemo4ConsoleApp/MTDemo4ConsoleApp.csproj" Id="fe947228-38b7-48fe-a202-7f37923c6e09" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MTDemo6ConsoleApp/MTDemo6ConsoleApp.csproj" Id="99439de5-ff7e-4236-bec5-f7d8c6c070d2" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MTDemoConsoleApp1/MTDemoConsoleApp1.csproj" Id="5b768ba6-141a-4445-bceb-87e2bbb1f3fe" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MTDemoWinFormsApp/MTDemoWinFormsApp.csproj" Id="50a52863-e2a3-4af5-bea2-f97f239b8535" />
   </Folder>
   <Folder Name="/Unit Testing Demos/">
-    <Project Path="SuperBank.Business.Tests/SuperBank.Business.Tests.csproj" Id="b55f0254-d344-4b4f-9826-6f69bf40dca9" />
-    <Project Path="SuperBank.Business/SuperBank.Business.csproj" Id="23bf32a0-7a50-47ac-8b67-483f1183af91" />
-    <Project Path="SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
-    <Project Path="SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperBank.Business.Tests/SuperBank.Business.Tests.csproj" Id="b55f0254-d344-4b4f-9826-6f69bf40dca9" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperBank.Business/SuperBank.Business.csproj" Id="23bf32a0-7a50-47ac-8b67-483f1183af91" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
   </Folder>
-  <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
-  <Project Path="CustomDynamicCollectionsDemo/CustomDynamicCollectionsDemo.csproj" Id="aa6cf4e9-e3f5-4de6-bef9-2237622aa4da" />
-  <Project Path="ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
-  <Project Path="Labs_References/Labs_References.csproj" />
-  <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+  <Project Path="E:/Demos/Opteamix/OpteamixDemos/ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
+  <Project Path="E:/Demos/Opteamix/OpteamixDemos/CustomDynamicCollectionsDemo/CustomDynamicCollectionsDemo.csproj" Id="aa6cf4e9-e3f5-4de6-bef9-2237622aa4da" />
+  <Project Path="E:/Demos/Opteamix/OpteamixDemos/ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
+  <Project Path="E:/Demos/Opteamix/OpteamixDemos/Labs_References/Labs_References.csproj" />
+  <Project Path="E:/Demos/Opteamix/OpteamixDemos/MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+  <Project Path="E:/Demos/Opteamix/OpteamixDemos/WebApplication1/WebApplication1.csproj" Id="8801e04d-c2b2-4c3f-89c3-81f8c5fc7f43" />
 </Solution>

@@ -25,10 +25,25 @@ namespace EFDemoConsoleApp1.DataAccess
             // Fluent API Syntax
             //modelBuilder.Entity<Employee>().HasKey(e => e.EmpId);
             //modelBuilder.Entity<Employee>().Property(e => e.Name).HasColumnName("EmpName").HasMaxLength(100);
+
+            //modelBuilder.Entity<Project>().UseTphMappingStrategy(); // default - 
+
+                    
+            //modelBuilder.Entity<Project>().UseTptMappingStrategy(); // dont use it
+
+            modelBuilder.Entity<Project>().UseTpcMappingStrategy(); // best
+
         }
 
         // Map Entity Classes with Tables
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<Address> Addresses { get; set; }
+        //public DbSet<Address> Addresses { get; set; }
+        public DbSet<Project> Projects { get; set; }
+
+        public DbSet<Skill> Skills { get; set; }
+
+        public DbSet<DesktopProject> DesktopProjects { get; set; }
+        public DbSet<WebProject> WebProjects { get; set; }
+        public DbSet<MobileProject> MobileProjects { get; set; }
     }
 }

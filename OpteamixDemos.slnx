@@ -11,6 +11,7 @@
   </Folder>
   <Folder Name="/EF Demos/">
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/EFDemoConsoleApp1/EFDemoConsoleApp1.csproj" Id="c3df86c5-7427-4dd5-beb9-a2dadfe18fb1" />
+    <Project Path="EFDbFirstDemo/EFDbFirstDemo.csproj" Id="d8b0b7db-bdbf-4287-9dc0-000c37bae774" />
   </Folder>
   <Folder Name="/LINQ/">
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/LinqDemo1/LinqDemo1.csproj" Id="07930503-e1cc-4cfd-9623-6f888438ad2a" />
@@ -33,6 +34,16 @@
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/IDECaseStudy.ConsoleApp/IDECaseStudy.ConsoleApp.csproj" />
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/OOConcepts/OOConcepts.csproj" />
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/TrainerTrainee.ConsoleApp/TrainerTrainee.ConsoleApp.csproj" />
+  </Folder>
+  <Folder Name="/Product Catelog Service/" />
+  <Folder Name="/Product Catelog Service/API Layer/">
+    <Project Path="ProductCatelogService.Api/ProductCatelogService.Api.csproj" Id="608f84a4-da48-4d4e-8c5e-919491cdd9a2" />
+  </Folder>
+  <Folder Name="/Product Catelog Service/Data Layer/">
+    <Project Path="ProductCatelogService.Data/ProductCatelogService.Data.csproj" Id="d84e8b7b-5cd3-42ed-ba6b-c6359fa8a9e2" />
+  </Folder>
+  <Folder Name="/Product Catelog Service/Domain Layer/">
+    <Project Path="ProductCatelogService.Domain/ProductCatelogService.Domain.csproj" Id="d95252f2-7851-4582-9b57-e347765ab854" />
   </Folder>
   <Folder Name="/Threads/">
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/MDDemoConsoleApp2/MDDemoConsoleApp2.csproj" Id="074e9568-9694-40d5-92dd-5b59eecc1266" />

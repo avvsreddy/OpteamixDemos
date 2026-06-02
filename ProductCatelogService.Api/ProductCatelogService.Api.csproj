@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProductCatelogService.Data\ProductCatelogService.Data.csproj" />
     <ProjectReference Include="..\ProductCatelogService.Domain\ProductCatelogService.Domain.csproj" />
   </ItemGroup>
 

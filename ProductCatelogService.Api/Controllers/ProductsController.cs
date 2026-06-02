@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProductCatelogService.Domain.Entities;
 
 namespace ProductCatelogService.Api.Controllers
 {
@@ -12,11 +13,11 @@ namespace ProductCatelogService.Api.Controllers
     {
 
         // GET: http://localhost:5000/api/products
-        [HttpGet]
-        public List<Product> GetProducts()
-        {
-            // fetch data from database and return to client
-        }
+        //[HttpGet]
+        //public List<Product> GetProducts()
+        //{
+        //    // fetch data from database and return to client
+        //}
 
 
     }

@@ -26,6 +26,11 @@ namespace ProductCatelogService.Data
             return await _dbContext.Products.ToListAsync();
         }
 
+        public async Task<List<Product>> GetProductsByCategoryAsync(string categoryName)
+        {
+            return await _dbContext.Products.Where(p => p.Category.Contains(categoryName)).ToListAsync();
+        }
+
         public async Task<Product?> GetProductByIdAsync(int productId)
         {
             return await _dbContext.Products.FindAsync(productId);

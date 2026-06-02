@@ -10,5 +10,7 @@ namespace ProductCatelogService.Domain.Repositories
         Task SaveAsync(Product product);
         Task<List<Product>> GetAllProductsAsync();
         Task<Product?> GetProductByIdAsync(int productId);
+
+        Task<List<Product>> GetProductsByCategoryAsync(string categoryName);
     }
 }

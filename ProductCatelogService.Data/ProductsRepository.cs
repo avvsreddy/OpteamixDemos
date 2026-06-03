@@ -41,5 +41,17 @@ namespace ProductCatelogService.Data
             _dbContext.Products.Add(product);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task UpdateAsync(Product product)
+        {
+            _dbContext.Products.Update(product);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Product product)
+        {
+            _dbContext.Products.Remove(product);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

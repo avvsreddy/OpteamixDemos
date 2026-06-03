@@ -12,10 +12,10 @@ namespace ProductCatelogService.Data
 
         private ProductsDbContext _dbContext;
 
-        public ProductsRepository()
-        {
-            _dbContext = new ProductsDbContext();
-        }
+        //public ProductsRepository()
+        //{
+        //    _dbContext = new ProductsDbContext();
+        //}
         public ProductsRepository(ProductsDbContext dbContext)
         {
             _dbContext = dbContext;

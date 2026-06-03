@@ -1,5 +1,8 @@
 
 using Microsoft.AspNet.OData.Extensions;
+using Microsoft.EntityFrameworkCore;
+using ProductCatelogService.Data;
+using ProductCatelogService.Domain.Repositories;
 
 namespace ProductCatelogService.Api
 {
@@ -21,6 +24,15 @@ namespace ProductCatelogService.Api
 
             builder.Services.AddOData();
 
+            // register the repository with the DI container
+            builder.Services.AddScoped<IProductsRepository,ProductsRepository>();
+            //builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
+            //builder.Services.AddTransient<IProductsRepository, ProductsRepository>();
+
+
+            // db context registration with DI container
+            builder.Services.AddDbContext<ProductsDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
             var app = builder.Build();

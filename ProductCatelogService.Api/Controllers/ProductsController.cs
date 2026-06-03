@@ -7,13 +7,20 @@ using ProductCatelogService.Domain.Repositories;
 
 namespace ProductCatelogService.Api.Controllers
 {
-
-
     // http://localhost:5000/api/products
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
+
+        private readonly IProductsRepository repo;
+
+        public ProductsController(IProductsRepository repo) // DIP - Dependency Inversion Principle
+        {
+            this.repo = repo;
+        }
+
+
 
         // Design the endpoint uri and method for getting all products with Odata support
         // GET: http://localhost:5000/api/products/odata
@@ -22,7 +29,7 @@ namespace ProductCatelogService.Api.Controllers
         [EnableQuery]
         public IQueryable<Product> GetProductsOData()
         {
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
             var products = repo.GetAllProductsAsync().Result.AsQueryable();
             return products;
         }
@@ -33,7 +40,7 @@ namespace ProductCatelogService.Api.Controllers
         public async Task<List<Product>> GetProducts()
         {
             // fetch data from database and return to client
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
             return await repo.GetAllProductsAsync();
         }
 
@@ -44,7 +51,7 @@ namespace ProductCatelogService.Api.Controllers
         [Route("{id}")]
         public async Task<IActionResult> GetProduct(int id)
         {
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
 
             var product = await repo.GetProductByIdAsync(id);
             if (product == null)
@@ -64,7 +71,7 @@ namespace ProductCatelogService.Api.Controllers
         [Route("category/{category}")]
         public async Task<IActionResult> GetProductsByCategory(string category)
         {
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
             var products = await repo.GetProductsByCategoryAsync(category);
             if (products == null || products.Count == 0)
             {
@@ -101,7 +108,7 @@ namespace ProductCatelogService.Api.Controllers
             //    return BadRequest(ModelState);
             //}
 
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
             await repo.SaveAsync(product);
             // return 201 + location header + data
             return Created($"api/products/{product.ProductId}", product);
@@ -118,7 +125,7 @@ namespace ProductCatelogService.Api.Controllers
                 return BadRequest();
             }
 
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
             await repo.UpdateAsync(product);
             return NoContent();
         }
@@ -129,7 +136,7 @@ namespace ProductCatelogService.Api.Controllers
         [Route("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            IProductsRepository repo = new ProductsRepository();
+            //IProductsRepository repo = new ProductsRepository();
             var productToDelete = await repo.GetProductByIdAsync(id);
             if (productToDelete == null)
             {

@@ -62,9 +62,7 @@ namespace ProductCatelogService.Api.Controllers
             };
 
             var result =
-                await _userManager.CreateAsync(
-                    user,
-                    model.Password);
+                await _userManager.CreateAsync( user, model.Password);
 
             if (!result.Succeeded)
                 return BadRequest(result.Errors);

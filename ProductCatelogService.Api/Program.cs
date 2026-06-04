@@ -35,7 +35,22 @@ namespace ProductCatelogService.Api
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
+            string corsAllowAllPolicy = "AllowAll";
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(corsAllowAllPolicy, policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
+
+           
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -51,6 +66,9 @@ namespace ProductCatelogService.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //app.UseCors(corsAllowAllPolicy);
+            app.UseCors();
 
             app.UseAuthorization();
 

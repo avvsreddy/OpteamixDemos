@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductCatelogService.Data;
@@ -24,6 +25,7 @@ namespace ProductCatelogService.Api.Controllers
 
         // Design the endpoint uri and method for getting all products with Odata support
         // GET: http://localhost:5000/api/products/odata
+        [EnableCors("AllowAll")]
         [HttpGet]
         [Route("odata")]
         [EnableQuery]
@@ -37,6 +39,8 @@ namespace ProductCatelogService.Api.Controllers
 
         // GET: http://localhost:5000/api/products
         [HttpGet]
+        [EnableCors("AllowAll")]
+
         public async Task<List<Product>> GetProducts()
         {
             // fetch data from database and return to client
@@ -49,6 +53,10 @@ namespace ProductCatelogService.Api.Controllers
         // GET: http://localhost:5000/api/products/1
         [HttpGet]
         [Route("{id}")]
+        [EnableCors("AllowAll")]
+
+        [ProducesResponseType(typeof(Product), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProduct(int id)
         {
             //IProductsRepository repo = new ProductsRepository();
@@ -69,6 +77,8 @@ namespace ProductCatelogService.Api.Controllers
         // GET: http://localhost:5000/api/products/category/electronics
         [HttpGet]
         [Route("category/{category}")]
+        [EnableCors("AllowAll")]
+
         public async Task<IActionResult> GetProductsByCategory(string category)
         {
             //IProductsRepository repo = new ProductsRepository();
@@ -99,6 +109,8 @@ namespace ProductCatelogService.Api.Controllers
         // POST: http://localhost:5000/api/products
 
         [HttpPost]
+        [EnableCors("AllowAll")]
+        
         public async Task<IActionResult> AddProductAsync(Product product)
         {
 

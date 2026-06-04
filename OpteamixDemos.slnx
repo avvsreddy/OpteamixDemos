@@ -1,4 +1,11 @@
 <Solution>
+  <Folder Name="/Basics/">
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/CustomDynamicCollectionsDemo/CustomDynamicCollectionsDemo.csproj" Id="aa6cf4e9-e3f5-4de6-bef9-2237622aa4da" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+    <Project Path="E:/Demos/Opteamix/OpteamixDemos/WebApplication1/WebApplication1.csproj" Id="8801e04d-c2b2-4c3f-89c3-81f8c5fc7f43" />
+  </Folder>
   <Folder Name="/Collections/">
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/CollectionsDemo1/CollectionsDemo1.csproj" Id="d869f9ea-640d-4e49-920b-9d3bbbbf888a" />
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/CollectionsDemo3/CollectionsDemo3.csproj" Id="04b77f82-ed0e-477f-abbc-bb8240c14427" />
@@ -59,10 +66,5 @@
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
   </Folder>
-  <Project Path="E:/Demos/Opteamix/OpteamixDemos/ConsoleApp1/ConsoleApp1.csproj" Id="ed37bad3-b465-4f61-827b-466f37542106" />
-  <Project Path="E:/Demos/Opteamix/OpteamixDemos/CustomDynamicCollectionsDemo/CustomDynamicCollectionsDemo.csproj" Id="aa6cf4e9-e3f5-4de6-bef9-2237622aa4da" />
-  <Project Path="E:/Demos/Opteamix/OpteamixDemos/ExceptionsDemo/ExceptionsDemo.csproj" Id="4acc47fa-91e1-465f-8769-ded8edb6096d" />
   <Project Path="E:/Demos/Opteamix/OpteamixDemos/Labs_References/Labs_References.csproj" />
-  <Project Path="E:/Demos/Opteamix/OpteamixDemos/MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
-  <Project Path="E:/Demos/Opteamix/OpteamixDemos/WebApplication1/WebApplication1.csproj" Id="8801e04d-c2b2-4c3f-89c3-81f8c5fc7f43" />
 </Solution>

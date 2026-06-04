@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ namespace ProductCatelogService.Api.Controllers
     // http://localhost:5000/api/products
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
 
@@ -29,6 +31,7 @@ namespace ProductCatelogService.Api.Controllers
         [HttpGet]
         [Route("odata")]
         [EnableQuery]
+        [AllowAnonymous]
         public IQueryable<Product> GetProductsOData()
         {
             //IProductsRepository repo = new ProductsRepository();
@@ -40,7 +43,7 @@ namespace ProductCatelogService.Api.Controllers
         // GET: http://localhost:5000/api/products
         [HttpGet]
         [EnableCors("AllowAll")]
-
+       
         public async Task<List<Product>> GetProducts()
         {
             // fetch data from database and return to client

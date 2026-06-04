@@ -1,8 +1,13 @@
 
 using Microsoft.AspNet.OData.Extensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using ProductCatelogService.Api.Services;
 using ProductCatelogService.Data;
 using ProductCatelogService.Domain.Repositories;
+using System.Text;
 
 namespace ProductCatelogService.Api
 {
@@ -29,10 +34,42 @@ namespace ProductCatelogService.Api
             //builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
             //builder.Services.AddTransient<IProductsRepository, ProductsRepository>();
 
+            builder.Services.AddScoped<TokenService>();
+
+     
+            var key = Encoding.UTF8.GetBytes("ThisIsMySecretKey123456789fsdfsdfsdfljdfdfjdfdfker3redfdsfsdfeweqredfgdfgdfgrgqertegdgsdgdfg"); // keep this secret key in appsettings.json or environment variable or key vaults in real application 
+
+            builder.Services
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters =
+                        new TokenValidationParameters
+                        {
+                            ValidateIssuer = true,
+                            ValidateAudience = true,
+                            ValidateLifetime = true,
+                            ValidateIssuerSigningKey = true,
+
+                            ValidIssuer = "Opteamix-AuthServer",
+                            ValidAudience = "Opteamix-Api-Clients",
+
+                            IssuerSigningKey =
+                                new SymmetricSecurityKey(key)
+                        };
+                });
+
+            builder.Services.AddAuthorization();
+
 
             // db context registration with DI container
             builder.Services.AddDbContext<ProductsDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services
+                .AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ProductsDbContext>()
+                .AddDefaultTokenProviders();
 
 
             string corsAllowAllPolicy = "AllowAll";
@@ -70,7 +107,10 @@ namespace ProductCatelogService.Api
             //app.UseCors(corsAllowAllPolicy);
             app.UseCors();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+          
+          
 
             app.UseEndpoints(endpoints => 
             {

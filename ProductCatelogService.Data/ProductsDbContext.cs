@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ProductCatelogService.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace ProductCatelogService.Data
 {
-    public class ProductsDbContext : DbContext
+    public class ProductsDbContext : IdentityDbContext
     {
         // for configuration from appsettings.json
         public ProductsDbContext( DbContextOptions<ProductsDbContext> options ): base( options )

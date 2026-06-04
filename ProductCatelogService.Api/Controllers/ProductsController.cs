@@ -107,7 +107,7 @@ namespace ProductCatelogService.Api.Controllers
 
         // End point for Add new product
         // POST: http://localhost:5000/api/products
-
+        //
         [HttpPost]
         [EnableCors("AllowAll")]
         

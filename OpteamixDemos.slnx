@@ -66,5 +66,6 @@
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperCalculator.Business.Tests/SuperCalculator.Business.Tests.csproj" Id="aa24325c-cc4a-40bd-ab2b-c04e4d41814f" />
     <Project Path="E:/Demos/Opteamix/OpteamixDemos/SuperCalculator.Business/SuperCalculator.Business.csproj" Id="e39d7d43-acfb-4c29-8ba5-fc98e22f9b86" />
   </Folder>
+  <Project Path="Branch1/Branch1.csproj" Id="23f67a15-0410-483a-8efd-7d7266c8ff87" />
   <Project Path="E:/Demos/Opteamix/OpteamixDemos/Labs_References/Labs_References.csproj" />
 </Solution>

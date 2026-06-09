@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="title">DOM Demo</h1>
+        <p id="description">This is a demonstration of the Document Object Model (DOM) in JavaScript.</p>
+    </div>
+
+<script>
+  // Accessing DOM elements
+    const titleElement = document.getElementById('title');  
+   console.log(titleElement.textContent); // 
+   //Output: DOM Demo
+   console.log(titleElement.innerHTML); // Output: DOM Demo
+    titleElement.textContent = 'Updated DOM Demo'; // Update the text content of the title element
+    console.log(titleElement.textContent); // Output: Updated DOM Demo
+   
+</script>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Application</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <hr>
+    <input type="text" id="todoInput" placeholder="Enter a new todo">
+    <button id="addTodoButton" onclick="addTodoButton()">Add Todo</button>
+    <br><br>
+    <ul id="todoList">
+            <li>Sample Todo Item 1</li>
+    </ul>
+
+    <script>
+        // Get references to DOM elements
+        const todoInput = document.getElementById('todoInput');
+        const addTodoButton = document.getElementById('addTodoButton');
+        const todoList = document.getElementById('todoList');
+
+        // Function to add a new todo item
+        function addTodoButton() {
+            // Get the value from the input field
+            const todoText = todoInput.value.trim();
+            // Check if the input is not empty
+            if (todoText !== '') {
+                // Create a new list item
+                const newTodo = document.createElement('li');
+                // Set the text of the new list item to the input value
+                newTodo.textContent = todoText;
+                // Append the new list item to the todo list
+                todoList.appendChild(newTodo);
+                // Clear the input field
+                todoInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

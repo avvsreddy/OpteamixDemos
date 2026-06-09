@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Products List</h1>
+    <hr>
+    <button onclick="fetchData()">Get Products from API</button>
+    <ul id="products-list">
+        <li>Product 1</li>
+        <li>Product 2</li>
+        <li>Product 3</li>
+    </ul>
+
+    <script>
+        // api call using fetch method
+        async function fetchData(){
+            const listEl = document.getElementById('products-list');
+            listEl.innerHTML = '<li>Loading...</li>';
+            try{
+                const res = await fetch('https://fakestoreapi.com/products');
+                if(!res.ok) throw new Error('Network response was not ok');
+                const products = await res.json();
+                listEl.innerHTML = '';
+                products.forEach(p => {
+                    const li = document.createElement('li');
+                    li.textContent = p.title || p.name || `Product ${p.id}`;
+                    listEl.appendChild(li);
+                });
+            }catch(err){
+                listEl.innerHTML = `<li>Error: ${err.message}</li>`;
+                console.error(err);
+            }
+        }
+
+    </script>
+</body>
+</html>

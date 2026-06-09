@@ -9,7 +9,7 @@
     <h1>Todo List</h1>
     <hr>
     <input type="text" id="todoInput" placeholder="Enter a new todo">
-    <button id="addTodoButton" onclick="addTodoButton()">Add Todo</button>
+    <button id="addTodoButton" onclick="addTodoButtonHandler()">Add Todo</button>
     <br><br>
     <ul id="todoList">
             <li>Sample Todo Item 1</li>
@@ -22,7 +22,7 @@
         const todoList = document.getElementById('todoList');
 
         // Function to add a new todo item
-        function addTodoButton() {
+        function addTodoButtonHandler() {
             // Get the value from the input field
             const todoText = todoInput.value.trim();
             // Check if the input is not empty

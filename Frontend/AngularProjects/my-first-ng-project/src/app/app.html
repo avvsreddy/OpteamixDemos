@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+
+<div class="card">
+  <img src="{{pictureUrl}}" class="card-img-top" alt="Employee picture" height="100" width="100">
+  <div class="card-body">
+    <h5 class="card-title">Employee: {{empName}}</h5>
+    <p class="card-text mb-1"><strong>Salary:</strong> {{salary}}</p>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [checked]="isActive" id="isActiveCheck">
+      <label class="form-check-label" for="isActiveCheck">Is Active</label>
+    </div>
+  </div>
+</div>

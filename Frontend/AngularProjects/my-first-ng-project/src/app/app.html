@@ -1,17 +1,27 @@
-<h1>{{title}}</h1>
+<h1 class="text-center">Products List <span class="badge bg-info">{{products.length}}</span>
+</h1>
 
-<div class="card">
-  <img src="{{pictureUrl}}" class="card-img-top" alt="Employee picture" height="100" width="100">
-  <div class="card-body">
-    <h5 class="card-title">Employee: {{empName}}</h5>
-    <p class="card-text mb-1"><strong>Salary:</strong> {{salary}}</p>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" [checked]="isActive" id="isActiveCheck">
-      <label class="form-check-label" for="isActiveCheck">Is Active</label>
-    </div>
-  </div>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Is Available</th>
+    </tr>
+      </thead>
+    <tbody>
+      @for (item of products; track $index) {
+      <tr>
+        <td>{{$index+1}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td><input type="checkbox" [checked]="item.isAvailable"></td>
+      </tr>
+    }
+    </tbody>
 
+</table>
 
-<input type="text" [(ngModel)]="empName"><br>
-<button (click)="display()"> Click Me! </button>

@@ -12,7 +12,7 @@ namespace ProductCatelogService.Api.Controllers
     // http://localhost:5000/api/products
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ProductsController : ControllerBase
     {
 

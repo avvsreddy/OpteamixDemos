@@ -1,1 +1,40 @@
-<p>product-list works!</p>
+<div class="container">
+<h1>Product List</h1>
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>S.No</th>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Country</th>
+        <th>Category</th>
+        <th>In Stock</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+@for (item of products; track $index) {
+    <tr>
+        <td>{{$index + 1}}</td>
+        <td>{{item.productId}}</td>
+        <td>{{item.productName}}</td>
+        <td>{{item.price | currency : 'INR'}}</td>
+        <td>{{item.country | uppercase}}</td>
+         <td>{{item.category}}</td>
+        <td><input type="checkbox" [checked]="item.inStock" disabled></td>
+        <td>
+            <button routerLink="/product-add" class="btn btn-primary">
+               Edit 
+            </button>
+            &nbsp;
+            <button routerLink="/product-delete" class = "btn btn-danger">
+               Delete
+            </button>
+        </td>
+    </tr>
+}
+</tbody>
+</table>
+</div>

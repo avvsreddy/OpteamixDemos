@@ -5,6 +5,7 @@ import { Contact } from './contact/contact';
 import { ProductList } from './product-list/product-list';
 import { NotFound } from './not-found/not-found';
 import { ProductCreate } from './product-create/product-create';
+import { ProductCreateReactive } from './product-create-reactive/product-create-reactive';
 
 export const routes: Routes = 
 [
@@ -40,7 +41,7 @@ export const routes: Routes =
 },
 {
     path:'product-create',
-    component:ProductCreate,
+    component:ProductCreateReactive,
     title:'Create Product'
 },
 {

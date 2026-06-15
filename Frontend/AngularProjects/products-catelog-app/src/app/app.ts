@@ -8,10 +8,11 @@ import { Aboutus } from "./aboutus/aboutus";
 import { Home } from "./home/home";
 import { NotFound } from './not-found/not-found';
 import { ProductCreate } from './product-create/product-create';
+import { ProductCreateReactive } from './product-create-reactive/product-create-reactive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, NavBar, Contact, Aboutus, Home, NotFound,ProductCreate],
+  imports: [RouterOutlet, Header, Footer, NavBar, Contact, Aboutus, Home, NotFound,ProductCreateReactive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

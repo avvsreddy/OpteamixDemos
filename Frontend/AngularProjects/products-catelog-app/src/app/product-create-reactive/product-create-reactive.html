@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Reactive Forms Demo</h1>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <input formControlName="productName"  type="text" placeholder="Product Name"><br>
+    <input formControlName="price" type="text" placeholder="Price"><br>
+    <input formControlName="category" type="text" placeholder="Category"><br>
+    <input formControlName="country" type="text" placeholder="Country"><br>
+    In Stock: <input type="checkbox" formControlName="inStock"><br>
+    <input type="submit">
+</form>
+</div>

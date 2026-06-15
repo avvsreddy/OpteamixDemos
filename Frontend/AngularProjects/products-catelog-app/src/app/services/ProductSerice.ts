@@ -1,5 +1,7 @@
-import { Injectable } from "@angular/core";
+import { inject, Injectable } from "@angular/core";
 import { Product } from "../models/product";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 
 @Injectable({
@@ -8,6 +10,15 @@ import { Product } from "../models/product";
 
 export class ProductService{
 
+httpClient:HttpClient = inject(HttpClient);
+
+getProductsFromApi():Observable<Product[]>{
+
+  const apiUrl = 'https://localhost:44389/api/Products';
+  const headers = new HttpHeaders({ 'Accept': 'application/json' });
+  return this.httpClient.get<Product[]>(apiUrl, { headers });
+
+  }
 getProducts() : Product[]{
 
    const products:Product[]=

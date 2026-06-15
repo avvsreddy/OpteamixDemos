@@ -1,0 +1,24 @@
+
+<div class="container">
+<h1>Create Product</h1>
+
+<form #productForm="ngForm" (ngSubmit)="onSubmit()">
+    <input #productName="ngModel"   type="text" placeholder="Enter Product Name" name="productName" [(ngModel)]='productInput.productName' required>
+    @if(productName.invalid && productName.dirty && productName.touched){
+        <span class="text-danger">Name field is required</span>
+    }
+
+
+
+    <br/>
+    <input type="text" placeholder="Enter Product Price" name="price" [(ngModel)]="productInput.price" required><br/>
+    <input type="text" placeholder="Enter Country" name="country" [(ngModel)]="productInput.country" required><br/>
+    <input type="text" placeholder="Enter Category" name="category"[(ngModel)]="productInput.category" required><br/>
+    Is in stock :<input type="checkbox" name="inStock" [(ngModel)]="productInput.inStock"><br/>
+    <input type="submit" value="Submit" [disabled]="productForm.invalid">
+</form>
+</div>
+
+<hr>
+Product Data : {{productInput | json}}
+

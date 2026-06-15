@@ -7,10 +7,11 @@ import { Contact } from "./contact/contact";
 import { Aboutus } from "./aboutus/aboutus";
 import { Home } from "./home/home";
 import { NotFound } from './not-found/not-found';
+import { ProductCreate } from './product-create/product-create';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, NavBar, Contact, Aboutus, Home, NotFound],
+  imports: [RouterOutlet, Header, Footer, NavBar, Contact, Aboutus, Home, NotFound,ProductCreate],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

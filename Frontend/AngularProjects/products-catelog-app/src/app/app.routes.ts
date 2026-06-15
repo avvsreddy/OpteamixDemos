@@ -4,6 +4,7 @@ import { Aboutus } from './aboutus/aboutus';
 import { Contact } from './contact/contact';
 import { ProductList } from './product-list/product-list';
 import { NotFound } from './not-found/not-found';
+import { ProductCreate } from './product-create/product-create';
 
 export const routes: Routes = 
 [
@@ -36,6 +37,11 @@ export const routes: Routes =
     title:'Manage Products'
     
     
+},
+{
+    path:'product-create',
+    component:ProductCreate,
+    title:'Create Product'
 },
 {
     path:'**',

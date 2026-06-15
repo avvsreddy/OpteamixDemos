@@ -35,6 +35,7 @@ export const routes: Routes =
     component:ProductList,
     title:'Manage Products'
     
+    
 },
 {
     path:'**',

@@ -30,7 +30,6 @@ private pService : ProductService = inject(ProductService);
           return of([] as Product[]);
         })
       );
-
   }
   
 

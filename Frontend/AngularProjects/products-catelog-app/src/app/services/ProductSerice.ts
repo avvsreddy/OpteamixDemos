@@ -22,7 +22,13 @@ getProductsFromApi():Observable<Product[]>{
 getProducts() : Observable<Product[]>{
 
   const apiUri:string = 'https://localhost:44389/api/Products';
-  return this.httpClient.get<Product[]>(apiUri);
+  const token = localStorage.getItem('token') || '';
+  const headers = new HttpHeaders({
+    'Accept': 'application/json',
+    'Authorization': `Bearer ${token}`
+  });
+
+  return this.httpClient.get<Product[]>(apiUri, { headers });
 }
 //    const products:Product[]=
 //     [

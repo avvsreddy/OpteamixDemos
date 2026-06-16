@@ -6,6 +6,7 @@ import { ProductList } from './product-list/product-list';
 import { NotFound } from './not-found/not-found';
 import { ProductCreate } from './product-create/product-create';
 import { ProductCreateReactive } from './product-create-reactive/product-create-reactive';
+import { ProductEdit } from './product-edit/product-edit';
 
 export const routes: Routes = 
 [
@@ -38,6 +39,11 @@ export const routes: Routes =
     title:'Manage Products'
     
     
+},
+
+{
+    path:'product-edit/:id',
+    component:ProductEdit
 },
 {
     path:'product-create',

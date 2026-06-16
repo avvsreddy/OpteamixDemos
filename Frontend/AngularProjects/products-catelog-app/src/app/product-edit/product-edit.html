@@ -1,0 +1,38 @@
+<div class="container">
+<h1>Editing Product {{productId}}</h1>
+@if(product | async; as product)
+{
+<form #productForm="ngForm" (ngSubmit)="onSubmit()" novalidate class="row g-3">
+      <div class="col-12">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" name="name" required minlength="3" [(ngModel)]="product.productName" #name="ngModel" class="form-control" />
+      </div>
+
+      <div class="col-12">
+        <label for="price" class="form-label">Price</label>
+        <input id="price" name="price" required pattern="^[0-9]+(\.[0-9]{1,2})?$" [(ngModel)]="product.price" #price="ngModel" class="form-control" />
+      </div>
+
+      <div class="col-12">
+        <label for="category" class="form-label">Category</label>
+        <input id="category" name="category" [(ngModel)]="product.category" class="form-control" />
+      </div>
+
+      <div class="col-12">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" name="description" rows="4" [(ngModel)]="product.country" class="form-control"></textarea>
+      </div>
+
+      <div class="col-12 form-check">
+        <input type="checkbox" id="available" name="available" [(ngModel)]="product.inStock" class="form-check-input" />
+        <label for="available" class="form-check-label">Available</label>
+      </div>
+
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Save</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+    
+}
+</div>

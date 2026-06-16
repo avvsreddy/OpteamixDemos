@@ -1,3 +1,31 @@
+
+<h1>{{data1}}</h1>
+<h1>{{data2}}</h1>
+<h1>{{data3}}</h1>
+<hr>
+<h1>Products Count: {{products.length}}</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Product Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product | json }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
 <div class="container py-5">
   <div class="row align-items-center mb-5">
     <div class="col-lg-6">

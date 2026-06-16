@@ -11,24 +11,28 @@ import { Observable } from "rxjs";
 export class ProductService{
 
 httpClient:HttpClient = inject(HttpClient);
+apiUri:string = 'https://localhost:44389/api/Products';
 
-getProductsFromApi():Observable<Product[]>{
+getProductById(id:number) : Observable<Product>{
+  return this.httpClient.get<Product>(this.apiUri + `/${id}`);
+}
 
-  const apiUrl = 'https://localhost:44389/api/Products';
-  const headers = new HttpHeaders({ 'Accept': 'application/json' });
-  return this.httpClient.get<Product[]>(apiUrl, { headers });
+editProduct(id:number,product:Product){
+  this.httpClient.put(this.apiUri + `/${id}`,product)
+  alert('edited');
+}
 
-  }
+
 getProducts() : Observable<Product[]>{
 
-  const apiUri:string = 'https://localhost:44389/api/Products';
+  
   const token = localStorage.getItem('token') || '';
   const headers = new HttpHeaders({
     'Accept': 'application/json',
     'Authorization': `Bearer ${token}`
   });
 
-  return this.httpClient.get<Product[]>(apiUri, { headers });
+  return this.httpClient.get<Product[]>(this.apiUri, { headers });
 }
 //    const products:Product[]=
 //     [

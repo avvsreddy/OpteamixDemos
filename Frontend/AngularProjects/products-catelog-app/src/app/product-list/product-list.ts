@@ -18,13 +18,19 @@ export class ProductList implements OnInit
 private pService : ProductService = inject(ProductService);
 
   products$!:Observable<Product[]>;
-  
-  //errMsg:string='';
- 
-  
+
+  errMsg:string='';
+
   ngOnInit(): void {
-   this.products$ = this.pService.getProducts();
-    
+    // fetch from api and handle if any errors
+    this.products$ = this.pService.getProducts()
+      .pipe(
+        catchError(err => {
+          this.errMsg = err?.message || 'Failed to load products.';
+          return of([] as Product[]);
+        })
+      );
+
   }
   
 

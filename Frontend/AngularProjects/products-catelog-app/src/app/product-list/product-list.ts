@@ -17,25 +17,14 @@ export class ProductList implements OnInit
     
 private pService : ProductService = inject(ProductService);
 
-  products!:Observable<Product[]>;
+  products$!:Observable<Product[]>;
   
-  errMsg:string='';
-  router:Router=inject(Router);
+  //errMsg:string='';
+ 
   
   ngOnInit(): void {
-   
-    // call service method to get the products and catch any API errors
-    this.products = this.pService.getProductsFromApi().pipe(
-      catchError((error) => {
-        // const errDetail =
-        //   (error as any)?.message ||
-        //   (error as any)?.statusText ||
-        //   (error as any)?.error?.message ||
-        //   JSON.stringify(error);
-        this.errMsg = 'Failed to load products. Please try again later. ' + error.message;
-        return of([] as Product[]);
-      })
-    );
+   this.products$ = this.pService.getProducts();
+    
   }
   
 
